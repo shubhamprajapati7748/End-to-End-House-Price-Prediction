@@ -1,73 +1,88 @@
-/* Reset some default styles */
-body,
-h1,
-form {
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: #333;
 }
 
-/* Center the form and result */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+h2.result {
+  text-align: center;
+  font-size: 1.5rem;
+  color: green;
+  margin-top: 20px;
 }
 
-/* Style the form */
 form {
-  width: 50%;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-  margin: 10px 0;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-}
-
-input[type="text"],
-select {
+input[type="text"] {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: 1px solid #ddd;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
-/* Style the submit button */
+input[type="text"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(0, 128, 0, 0.2);
+}
+
 input[type="submit"] {
   width: 100%;
-  padding: 10px;
-  background-color: #007bff;
+  padding: 12px;
+  font-size: 1.2rem;
+  background-color: #4CAF50;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #45a049;
 }
 
-/* Style the result header */
-h1 {
-  text-align: center;
-  font-size: 24px;
-  color: #333;
-  margin-top: 20px;
+input[type="submit"]:active {
+  background-color: #387636;
+}
+
+input[type="submit"]:disabled {
+  background-color: #dcdcdc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+    width: 90%;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  input[type="submit"] {
+    font-size: 1rem;
+  }
 }

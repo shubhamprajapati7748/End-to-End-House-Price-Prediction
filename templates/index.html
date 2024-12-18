@@ -1,39 +1,38 @@
-<html>
-  <head>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{url_for('static', filename='style.css')}}"
-    />
-    <title>Project Title</title>
-  </head>
-  <body>
-    <h1><center>Project Name</center></h1>
-    <form action="" method="POST">
-      <div class="form-group">
-        <label for="carat">Field:</label>
-        <input
-          type="text"
-          id="carat"
-          name="carat"
-          placeholder="Enter carat value (float)"
-        />
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name</title>
+    <link rel="stylesheet" type="text/css"  href="{{url_for('static', filename='style.css')}}" />
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <br>
+    <br>
+    <h1>Boston House Price Prediction System</h1>
 
-      <div class="form-group">
-        <label for="cut">Cut:</label>
-        <select id="cut" name="cut">
-          <option value="Fair">Fair</option>
-          <option value="Good">Good</option>
-          <option value="Very Good">Very Good</option>
-          <option value="Premium">Premium</option>
-          <option value="Ideal">Ideal</option>
-        </select>
-      </div>
+    <form action="{{ url_for('predict_datapoints') }}" method="POST">
+        <input type="text" name="crim" placeholder="crim" required /><br>
+        <input type="text" name="zn" placeholder="zn" required /><br>
+        <input type="text" name="indus" placeholder="indus" required /><br>
+        <input type="text" name="chas" placeholder="chas" required /><br>
+        <input type="text" name="nox" placeholder="nox" required /><br>
+        <input type="text" name="rm" placeholder="rm" required /><br>
+        <input type="text" name="age" placeholder="age" required /><br>
+        <input type="text" name="dis" placeholder="dis" required /><br>
+        <input type="text" name="rad" placeholder="rad" required /><br>
+        <input type="text" name="tax" placeholder="tax" required /><br>
+        <input type="text" name="ptratio" placeholder="ptratio" required /><br>
+        <input type="text" name="b" placeholder="b" required /><br>
+        <input type="text" name="lstat" placeholder="lstat" required /><br>
 
-      </div>
-      <div style="clear: both"></div>
-      <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" />
     </form>
-  </body>
+    
+    <br>
+    {% if results %}
+      <h2 class="result">The Prediction is: {{ results }}</h2>
+    {% endif %}
+</body>
 </html>

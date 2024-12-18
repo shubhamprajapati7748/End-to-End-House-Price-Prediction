@@ -21,6 +21,8 @@
 
 This project aims to develop a machine learning model that accurately predicts housing prices using the Boston Housing dataset. By analyzing various features of houses, such as crime rate, number of rooms, and accessibility to highways, the model provides valuable insights for potential buyers or sellers in estimating housing prices. The project utilizes the powerful CatBoostRegressor algorithm for optimal performance and incorporates techniques like data preprocessing, exploratory data analysis, and model training. The trained model can be used as a tool to make informed decisions in the real estate market.
 
+![alt text](image.png)
+
 ## About the Data
 
 1. CRIM: Per capita crime rate by town
@@ -43,7 +45,7 @@ This project aims to develop a machine learning model that accurately predicts h
 
 ### Dataset Source Link
 
-Dataset Url : `https://www.kaggle.com/datasets/vikrishnan/boston-house-prices/data`
+Dataset Url : `https://github.com/selva86/datasets/blob/master/BostonHousing.csv`
 
 ## Technology Stack
 
@@ -73,7 +75,7 @@ Follow these steps to install and set up the project directly from the GitHub re
    - Navigate to the directory where you want to install the project.
    - Run the following command to clone the GitHub repository:
      ```
-     git clone https://github.com/shubhamprajapati241/End-to-End-House-Price-Prediction
+     git clone https://github.com/shubhamprajapati7748/End-to-End-House-Price-Prediction
      ```
 
 2. **Create a Virtual Environment** (Optional but recommended)
@@ -122,14 +124,14 @@ If you prefer to use Docker, you can install and run the project using a Docker 
    - Open your terminal or command prompt.
    - Run the following command to pull the Docker image from DockerHub:
      ```
-     docker pull <Image_Name>
+     docker pull shubhamprajapati7748/house-app
      ```
 
 2. **Run the Docker Container**
 
    - Start the Docker container by running the following command, and mapping any necessary ports:
      ```
-     docker run -p 5000:5000 <Container_Name>
+     docker run -p 5000:5000 shubhamprajapati7748/house-app
      ```
 
 3. **Access the Project**
